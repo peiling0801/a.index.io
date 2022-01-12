@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>九宮格</title>
+</head>
+<style>
+    .a{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        margin: 10px;
+        display: inline-block;
+    }
+</style>
+<body>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div><br>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div><br>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div><br>
+    <input type="button" value="更新" id="re" style="font-size: 30px;">
+
+</body>
+</html>
+<script>
+    $(".a").click(function(){
+        
+        if($(this).css("background-color")=="rgb(0, 0, 255)"){
+            $(this).css("background-image","url(3.jfif)")
+
+        }
+        if(($(".a:eq(0)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(1)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(2)").css("background-color")=="rgb(255, 0, 0)"))  alert("you win!!!");
+        if(($(".a:eq(3)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(4)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(5)").css("background-color")=="rgb(255, 0, 0)"))  alert("you win!!!");
+        if(($(".a:eq(6)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(7)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(8)").css("background-color")=="rgb(255, 0, 0)"))  alert("you win!!!");
+        
+        if(($(".a:eq(0)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(4)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(8)").css("background-color")=="rgb(255, 0, 0)"))  alert("you win!!!");
+        if(($(".a:eq(2)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(4)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(6)").css("background-color")=="rgb(255, 0, 0)"))  alert("you win!!!");
+        
+        if(($(".a:eq(0)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(3)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(6)").css("background-color")=="rgb(255, 0, 0)"))  alert("you win!!!");
+        if(($(".a:eq(1)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(4)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(7)").css("background-color")=="rgb(255, 0, 0)"))  alert("you win!!!");
+        if(($(".a:eq(2)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(5)").css("background-color")=="rgb(255, 0, 0)")&&($(".a:eq(8)").css("background-color")=="rgb(255, 0, 0)"))  alert("you win!!!");
+
+
+
+
+    });
+    $("#re").click(function(){
+        $(".a").css("background-color","blue");
+    });
+</script>
